@@ -75,4 +75,5 @@ Simple doesn't mean easy. Price action is straightforward in concept but require
 
 
 ### About Odinaka:
-I'm Odinaka, a software developer and trader. I write about my thoughts and experiences on my blog, iam-odinaka.vercel.app. I'm very passionate about data as much as I am about numbers. It's the main reason I'm keen on quantitative finance - building tools that help promote more efficient capital markets across the world. When I'm not building tools, I'm trading or reading about trading, or studying for my CFAs.
+I'm Odinaka, a software developer and trader. I write about my thoughts and experiences on my blog, iam-odinaka.vercel.app. I'm very passionate about data as much as I am about numbers. It's the main reason I'm keen on quantitative finance - building tools that help promote more efficient capital markets across the world. When I'm not building tools, I'm trading or reading about trading, or studying for my CFAs. My deep love for everything data and finance drove me to being the lead instructor at Eureka Financial Academy for two years, where I developed and taught students everything there was to know (at the time) about trading and investing.
+I have a strong grasp of macroeconomics and capital markets. Feel free to keep in touch!
