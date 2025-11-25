@@ -12,9 +12,9 @@ export default function BlogPage() {
     return (
         <div className="max-w-2xl mx-auto space-y-12 pt-12">
             <div className="text-center space-y-4">
-                <h1 className="text-4xl font-bold tracking-tight">Writing</h1>
+                <h1 className="text-4xl font-bold tracking-tight">my thoughts</h1>
                 <p className="text-muted-foreground text-lg">
-                    Thoughts on AI, entropy, and the future of technology.
+                    i think about a lot of things. i write about them too, sometimes.
                 </p>
             </div>
 
