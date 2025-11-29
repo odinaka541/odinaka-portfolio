@@ -96,13 +96,13 @@ export default function WorkPage() {
                     />
 
                     <h2 className="text-3xl font-bold mb-4 bg-gradient-to-r from-primary to-purple-500 bg-clip-text text-transparent">
-                        Work in Progress
+                        i'm as shocked as you this page is currently down.
                     </h2>
                     <p className="text-muted-foreground text-lg mb-6">
-                        We're currently remodeling this section to bring you an even better experience.
+                        it'll be back online soon.
                     </p>
                     <div className="inline-block px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium animate-pulse">
-                        Coming Soon
+                        just refresh the page. it might help
                     </div>
                 </GlassCard>
             </div>
