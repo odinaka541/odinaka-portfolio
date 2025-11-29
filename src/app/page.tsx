@@ -157,17 +157,17 @@ export default function Home() {
           {[
             {
               title: "Machine Learning & AI",
-              desc: "i read (well, listened to) Isaac Asimov's Last Question, and i was drawn to the idea of intelligent machines. and since, then, i enjoy building said machines.",
+              desc: "i read (well, listened to) Isaac Asimov's Last Question, and i was drawn to the idea of intelligent machines. and since then, i enjoy building said machines.",
               tags: ["Python", "TensorFlow", "PyTorch", "Scikit-learn"]
             },
             {
               title: "Quantitative Finance",
-              desc: "i think money makes the world go round. i enjoy the concept of money. moreso, i enjoy applying smart innovative processes to said concept.",
+              desc: "i think money makes the world go round. i enjoy the concept of money. moreso, i enjoy leveraging technology to tinker with said concept. think of it as a high-stakes game of chess, but with real money. (speaking of chess, i still can't play that good.)",
               tags: ["Python", "Pandas", "NumPy", "SciPy"]
             },
             {
               title: "Backend & Database",
-              desc: "i just do this for the money. i'm good at it anyways lmao.",
+              desc: "i just do this for the money. i'm good at it anyways lmao. check my 'work' page out.",
               tags: ["Node.js", "PostgreSQL", "MongoDB", "API Design"]
             }
           ].map((skill, index) => (

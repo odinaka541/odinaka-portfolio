@@ -42,10 +42,10 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
                     <div>
                         <Link
                             href="/blog"
-                            className="inline-flex items-center text-sm text-muted-foreground hover:text-primary transition-colors mb-8 group"
+                            className="inline-flex items-center text-sm text-muted-foreground hover:text-primary transition-colors mb-8 group font-bodoni lowercase tracking-wide"
                         >
                             <ArrowLeft className="mr-2 h-4 w-4 group-hover:-translate-x-1 transition-transform" />
-                            Back to Transmission
+                            back to writings
                         </Link>
 
                         <h1 className="text-4xl md:text-5xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-b from-white to-white/60 font-bodoni">
@@ -64,9 +64,6 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
                     {/* Ethereal Visual */}
                     <div className="mt-12 hidden lg:block">
                         <div className="w-full aspect-square rounded-full bg-gradient-to-tr from-primary/20 via-purple-500/10 to-transparent blur-3xl animate-pulse" />
-                        <p className="text-xs text-center text-white/20 mt-4 font-mono tracking-widest uppercase">
-                            Signal Received
-                        </p>
                     </div>
                 </div>
 
