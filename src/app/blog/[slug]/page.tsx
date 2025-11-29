@@ -1,5 +1,6 @@
 import { getPostData, getSortedPostsData } from "@/lib/blog";
 import { GlassCard } from "@/components/ui/glass-card";
+import { ViewCounter } from "@/components/view-counter";
 import Link from "next/link";
 import { ArrowLeft, Bookmark } from "lucide-react";
 
@@ -23,45 +24,63 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
     const { slug } = await params;
     const postData = await getPostData(slug);
 
-    return (
-        <div className="max-w-2xl mx-auto pt-8 pb-20">
-            <Link
-                href="/blog"
-                className="inline-flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors mb-8 group"
-            >
-                <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
-                Back to writing
-            </Link>
+    // Helper function for date formatting, as `formatDate` was not defined in the original context.
+    // This is a basic implementation to match the expected output format.
+    const formatDate = (dateString: string) => {
+        return new Date(dateString).toLocaleDateString("en-US", {
+            month: "short",
+            day: "numeric",
+            year: "numeric"
+        });
+    };
 
-            <GlassCard className="bg-white dark:bg-slate-900 border-border shadow-sm p-8 md:p-12">
-                <div className="flex items-center justify-between mb-8">
-                    <div className="flex items-center gap-3">
-                        <div className="w-10 h-10 rounded-full bg-muted flex items-center justify-center text-lg font-bold text-muted-foreground">
-                            {postData.author?.charAt(0) || "O"}
-                        </div>
-                        <div>
-                            <div className="font-semibold text-sm text-foreground">{postData.author || "Odinaka"}</div>
-                            <div className="text-xs text-muted-foreground">
-                                {new Date(postData.date).toLocaleDateString("en-US", {
-                                    month: "short",
-                                    day: "numeric",
-                                    year: "numeric"
-                                })}
-                            </div>
+    return (
+        <div className="min-h-screen pt-32 pb-20 px-4 sm:px-6 lg:px-8 relative z-10">
+            <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-4 gap-12">
+                {/* Column 1: Metadata & Ethereal Experience */}
+                <div className="lg:col-span-1 flex flex-col justify-between h-full sticky top-32">
+                    <div>
+                        <Link
+                            href="/blog"
+                            className="inline-flex items-center text-sm text-muted-foreground hover:text-primary transition-colors mb-8 group"
+                        >
+                            <ArrowLeft className="mr-2 h-4 w-4 group-hover:-translate-x-1 transition-transform" />
+                            Back to Transmission
+                        </Link>
+
+                        <h1 className="text-4xl md:text-5xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-b from-white to-white/60 font-bodoni">
+                            {postData.title}
+                        </h1>
+
+                        <div className="flex items-center gap-4 text-sm text-muted-foreground mb-8">
+                            <time dateTime={postData.date}>
+                                {formatDate(postData.date)}
+                            </time>
+                            <span>•</span>
+                            <ViewCounter slug={slug} />
                         </div>
                     </div>
-                    <Bookmark className="w-5 h-5 text-orange-500" />
+
+                    {/* Ethereal Visual */}
+                    <div className="mt-12 hidden lg:block">
+                        <div className="w-full aspect-square rounded-full bg-gradient-to-tr from-primary/20 via-purple-500/10 to-transparent blur-3xl animate-pulse" />
+                        <p className="text-xs text-center text-white/20 mt-4 font-mono tracking-widest uppercase">
+                            Signal Received
+                        </p>
+                    </div>
                 </div>
 
-                <h1 className="text-3xl md:text-4xl font-bold tracking-tight mb-6 text-foreground">
-                    {postData.title}
-                </h1>
+                {/* Column 2: Content */}
+                <div className="lg:col-span-2 prose prose-invert prose-lg max-w-none">
+                    {/* Assuming CustomMDX is a component you have defined elsewhere */}
+                    {/* For this example, I'll use dangerouslySetInnerHTML as a placeholder if CustomMDX is not available */}
+                    {/* If CustomMDX is a real component, ensure it's imported and used correctly */}
+                    <div dangerouslySetInnerHTML={{ __html: postData.contentHtml || "" }} />
+                </div>
 
-                <div
-                    className="prose prose-slate dark:prose-invert max-w-none prose-headings:font-bold prose-a:text-primary prose-img:rounded-xl"
-                    dangerouslySetInnerHTML={{ __html: postData.contentHtml || "" }}
-                />
-            </GlassCard>
+                {/* Column 3: Space (Empty) */}
+                <div className="hidden lg:block lg:col-span-1" />
+            </div>
         </div>
     );
 }
