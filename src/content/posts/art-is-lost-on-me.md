@@ -1,7 +1,7 @@
 ---
 title: "i thought about art"
 date: "2025-11-28"
-excerpt: "one of my favourite things to get lost in thought about is space - outer space. you could say i’m obsessed."
+excerpt: "'artists don't just admire art. they have reasons why they do too.'"
 author: "Odinaka"
 ---
 
