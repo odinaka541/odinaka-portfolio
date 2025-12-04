@@ -51,7 +51,7 @@ const projects = [
         title: "Swapam AI Microservice",
         description: "Computer vision system for item analysis and valuation in a student marketplace. Uses OpenAI CLIP for zero-shot categorization and condition assessment with a trust-rooted valuation system.",
         tags: ["Python", "FastAPI", "OpenAI CLIP", "Computer Vision"],
-        links: { demo: "http://13.218.91.146:8000/docs", github: "https://github.com/odinaka541/swapam-ai" },
+        links: { demo: "http://13.218.91.146:8000/docs", github: "https://github.com/swapam-ai" },
         image: "/images/projects/swapam_ai.png"
     },
     {
