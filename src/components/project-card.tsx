@@ -35,7 +35,7 @@ export function ProjectCard({ title, description, tags, links, index, image }: P
                     />
                 ) : (
                     <div className="absolute inset-0 flex items-center justify-center">
-                        <div className="w-full h-full bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary/5 via-transparent to-transparent opacity-50" />
+                        <div className="absolute inset-0 w-full h-full bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary/5 via-transparent to-transparent opacity-50" />
                         <div className="relative z-10 text-4xl font-bold text-primary/20 group-hover:text-primary/40 transition-colors font-bodoni">
                             🟠
                         </div>

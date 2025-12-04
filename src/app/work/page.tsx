@@ -59,7 +59,7 @@ const projects = [
         description: "Telegram bot that analyzes Excel sheets with conversational AI. Allows users to edit spreadsheets, generate content, and perform analysis using natural language commands.",
         tags: ["Python", "Telegram API", "Pandas", "NLP"],
         links: { demo: "https://t.me/lemina_data_bot", github: "#" },
-        image: ""
+        image: "/images/projects/telegram_bot.png"
     }
 ];
 
