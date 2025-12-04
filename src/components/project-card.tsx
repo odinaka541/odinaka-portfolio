@@ -1,9 +1,7 @@
-"use client";
-
 import { GlassCard } from "@/components/ui/glass-card";
 import { ArrowUpRight, Github } from "lucide-react";
 import Link from "next/link";
-import { motion } from "framer-motion";
+import Image from "next/image";
 
 interface ProjectCardProps {
     title: string;
@@ -14,9 +12,10 @@ interface ProjectCardProps {
         github?: string;
     };
     index: number;
+    image?: string;
 }
 
-export function ProjectCard({ title, description, tags, links, index }: ProjectCardProps) {
+export function ProjectCard({ title, description, tags, links, index, image }: ProjectCardProps) {
     return (
         <GlassCard
             initial={{ opacity: 0, y: 20 }}
@@ -26,17 +25,31 @@ export function ProjectCard({ title, description, tags, links, index }: ProjectC
             className="group flex flex-col h-full overflow-hidden border-0 bg-white/50 dark:bg-slate-900/50"
             hoverEffect
         >
-            <div className="relative h-48 mb-6 rounded-xl overflow-hidden bg-gradient-to-br from-primary/20 to-secondary/20 group-hover:from-primary/30 group-hover:to-secondary/30 transition-colors">
-                <div className="absolute inset-0 flex items-center justify-center text-4xl font-bold text-primary/20 group-hover:text-primary/40 transition-colors">
-                    {title.charAt(0)}
-                </div>
+            <div className="relative h-48 mb-6 rounded-xl overflow-hidden bg-gradient-to-br from-primary/5 to-secondary/5 group-hover:from-primary/10 group-hover:to-secondary/10 transition-colors border border-primary/10">
+                {image ? (
+                    <Image
+                        src={image}
+                        alt={title}
+                        fill
+                        className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                ) : (
+                    <div className="absolute inset-0 flex items-center justify-center">
+                        <div className="w-full h-full bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary/5 via-transparent to-transparent opacity-50" />
+                        <div className="relative z-10 text-4xl font-bold text-primary/20 group-hover:text-primary/40 transition-colors font-bodoni">
+                            🟠
+                        </div>
+                        {/* Abstract Pattern Overlay */}
+                        <div className="absolute inset-0 opacity-[0.03] bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] mix-blend-overlay" />
+                    </div>
+                )}
             </div>
 
             <div className="flex-1 flex flex-col">
-                <h3 className="text-xl font-bold mb-2 group-hover:text-primary transition-colors">
+                <h3 className="text-xl font-bold mb-2 group-hover:text-primary transition-colors font-bodoni tracking-wide">
                     {title}
                 </h3>
-                <p className="text-muted-foreground mb-4 flex-1 line-clamp-3">
+                <p className="text-muted-foreground mb-4 flex-1 line-clamp-3 text-sm leading-relaxed">
                     {description}
                 </p>
 
@@ -44,7 +57,7 @@ export function ProjectCard({ title, description, tags, links, index }: ProjectC
                     {tags.map((tag) => (
                         <span
                             key={tag}
-                            className="px-2.5 py-0.5 rounded-full text-xs font-medium bg-primary/10 text-primary"
+                            className="px-2.5 py-0.5 rounded-full text-[10px] uppercase tracking-wider font-medium bg-primary/5 text-primary border border-primary/10"
                         >
                             {tag}
                         </span>
@@ -56,7 +69,7 @@ export function ProjectCard({ title, description, tags, links, index }: ProjectC
                         <Link
                             href={links.demo}
                             target="_blank"
-                            className="flex-1 inline-flex justify-center items-center gap-2 px-4 py-2 rounded-lg bg-primary text-primary-foreground text-sm font-medium hover:bg-primary/90 transition-colors"
+                            className="flex-1 inline-flex justify-center items-center gap-2 px-4 py-2 rounded-lg bg-primary text-primary-foreground text-sm font-medium hover:bg-primary/90 transition-colors shadow-sm hover:shadow-md"
                         >
                             Live Demo
                             <ArrowUpRight className="w-4 h-4" />
@@ -66,7 +79,7 @@ export function ProjectCard({ title, description, tags, links, index }: ProjectC
                         <Link
                             href={links.github}
                             target="_blank"
-                            className="flex-1 inline-flex justify-center items-center gap-2 px-4 py-2 rounded-lg bg-muted text-muted-foreground text-sm font-medium hover:bg-muted/80 hover:text-foreground transition-colors"
+                            className="flex-1 inline-flex justify-center items-center gap-2 px-4 py-2 rounded-lg bg-muted text-muted-foreground text-sm font-medium hover:bg-muted/80 hover:text-foreground transition-colors border border-border/50"
                         >
                             Code
                             <Github className="w-4 h-4" />

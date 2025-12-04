@@ -41,7 +41,7 @@ export function HeroSection() {
                     transition={{ duration: 1, delay: 1.2 }}
                     className="text-lg md:text-2xl text-gray-300 font-light tracking-wide max-w-2xl mx-auto"
                 >
-                    "i am my Father's glory."
+                    ""
                 </motion.p>
             </div>
         </section>

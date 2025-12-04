@@ -6,52 +6,86 @@ import { motion } from "framer-motion";
 
 const projects = [
     {
-        title: "Memora AI Engine",
-        description: "Comprehensive multi-modal AI system for image analysis, text extraction, facial recognition and similarity search. Processes images to extract text, generate captions, detect objects and faces, and enables semantic search across indexed content.",
-        tags: ["Python", "Sentence Transformers", "FastAPI", "AWS"],
-        links: { demo: "#", github: "#" }
+        title: "Memora AI & Semantic Search",
+        description: "AI engine for a meme social media platform that processes uploaded memes to extract intelligence. Features a semantic search engine that sorts memes by meaning and returns semantically similar results.",
+        tags: ["Python", "AI", "Semantic Search", "Social Media"],
+        links: { demo: "https://memoraapp.co/", github: "https://github.com/MemoraHub" },
+        image: "/images/projects/memora_ai.png"
     },
     {
-        title: "AI Trading Platform",
-        description: "Comprehensive research platform for analyzing market patterns using machine learning. Features real-time data processing, backtesting capabilities, and predictive modeling for various asset classes.",
-        tags: ["Python", "TensorFlow", "FastAPI", "Pandas", "NumPy"],
-        links: { demo: "#", github: "#" }
+        title: "Selenium Web Scraper",
+        description: "Advanced scraper for SEC earnings data with anti-detection measures, robust error handling, and automated data processing. Features comprehensive logging and monitoring capabilities.",
+        tags: ["Python", "Selenium", "Web Scraping", "SEC Data"],
+        links: { demo: "https://github.com/odinaka541/earnings_scraper", github: "https://github.com/odinaka541/earnings_scraper" },
+        image: ""
     },
     {
-        title: "Conversational AI Data Platform",
-        description: "System that allows users upload spreadsheet data, analyse, visualize charts and create or edit spreadsheets, all in natural language.",
-        tags: ["NLP", "Pandas", "FastAPI", "NumPy"],
-        links: { demo: "#", github: "#" }
+        title: "AI Contact Automation Tool",
+        description: "FastAPI-powered application that analyzes contact relationships using AI-generated summaries of email interactions. Generates realistic conversation histories and provides action recommendations using Google Gemini AI.",
+        tags: ["FastAPI", "Python", "Google Gemini AI", "Pandas"],
+        links: { demo: "https://gmail-contact-conversation-summarizer-production.up.railway.app/", github: "https://github.com/odinaka541/gmail-contact-conversation-summarizer-" },
+        image: "/images/projects/contact_automation.png"
     },
     {
-        title: "ML Model Deployment Pipeline",
-        description: "Automated CI/CD pipeline for machine learning model deployment. Features model versioning, A/B testing, and automated rollback capabilities for production ML systems.",
-        tags: ["Python", "Kubernetes", "MLflow", "AWS"],
-        links: { demo: "#", github: "#" }
+        title: "Financial Risk Factor Analysis",
+        description: "BERT-based classifier for categorizing financial risk statements from 10-K filings. Uses deep learning to categorize risks into Operational, Financial, Market, Regulatory, and Technology sectors.",
+        tags: ["Python", "PyTorch", "BERT", "NLP"],
+        links: { demo: "https://github.com/odinaka541/deep-NLP-risk-filing-analysis", github: "https://github.com/odinaka541/deep-NLP-risk-filing-analysis" },
+        image: ""
+    },
+    {
+        title: "Financial Text Preprocessing",
+        description: "NLP preprocessing pipeline for financial text data with an interactive Streamlit interface. Implements URL removal, punctuation cleaning, and lemmatization for financial datasets.",
+        tags: ["Python", "Streamlit", "NLTK", "NLP"],
+        links: { demo: "https://odinaka-flexisaf-intermeddsmod3.streamlit.app/", github: "https://github.com/odinaka541/nlp_text-processing_mod3" },
+        image: "/images/projects/text_preprocessing.png"
+    },
+    {
+        title: "High-Frequency Microstructure LSTM",
+        description: "LSTM-based model for predicting bid-ask spreads and price direction in high-frequency trading environments. Uses simulated market microstructure data to model volatility and order flow.",
+        tags: ["Python", "PyTorch", "LSTM", "Trading"],
+        links: { demo: "https://odinaka-flexisaf-intermeddsmod1-1.streamlit.app/", github: "  https://github.com/odinaka541/hft-microstructures-lstm" },
+        image: "/images/projects/lstm_trading.png"
+    },
+    {
+        title: "Swapam AI Microservice",
+        description: "Computer vision system for item analysis and valuation in a student marketplace. Uses OpenAI CLIP for zero-shot categorization and condition assessment with a trust-rooted valuation system.",
+        tags: ["Python", "FastAPI", "OpenAI CLIP", "Computer Vision"],
+        links: { demo: "#", github: "https://github.com/odinaka541/swapam-ai" },
+        image: "/images/projects/swapam_ai.png"
+    },
+    {
+        title: "Telegram AI Bot",
+        description: "Telegram bot that analyzes Excel sheets with conversational AI. Allows users to edit spreadsheets, generate content, and perform analysis using natural language commands.",
+        tags: ["Python", "Telegram API", "Pandas", "NLP"],
+        links: { demo: "https://t.me/lemina_data_bot", github: "#" },
+        image: ""
     }
 ];
 
 const experience = [
+    {
+        role: "Freelance AI & Backend Engineer",
+        company: "Self-Employed",
+        period: "2024 - Present",
+        description: "Specializing in building robust backend systems and integrating advanced AI capabilities for diverse clients. Delivering high-performance solutions for data processing, automation, and intelligent systems.",
+        achievements: [
+            "Architected and deployed scalable FastAPI microservices for AI-powered applications",
+            "Implemented custom RAG pipelines and LLM integrations for specialized business use cases",
+            "Conducted technical workshops and mentoring sessions on Python backend development and AI fundamentals"
+        ]
+    },
     {
         role: "AI/ML Engineer",
         company: "Memora",
         period: "2025 - Present",
         description: "Leading the development of machine learning systems for automated image data analysis and prediction. Building scalable ML pipelines and deploying models to production.",
         achievements: [
-            "Architected and optimized AI engine for real-time semantic search across image and GIF datasets, implementing BLIP, CLIP, and YOLO models",
+            "Architected and optimized AI engine for real-time semantic search across image and GIF datasets",
             "Built scalable retrieval system handling high-volume concurrent requests from backend services",
             "Engineered multi-modal processing pipeline supporting diverse image formats"
         ]
     },
-    // {
-    //     role: "AI/ML Engineer",
-    //     company: "Stealth Tech Startup",
-    //     period: "2025 - Present",
-    //     description: "Developed AI-first data platform enabling natural language interaction with diverse datasets.",
-    //     achievements: [
-    //         "Led product development from conception to beta, building core platform using Python-based ML infrastructure"
-    //     ]
-    // },
     {
         role: "Data Science Consultant",
         company: "International NGO",
@@ -76,39 +110,10 @@ const experience = [
 export default function WorkPage() {
     return (
         <div className="relative min-h-screen">
-            {/* Under Reconstruction Overlay */}
-            <div className="fixed inset-0 z-40 flex items-center justify-center p-4 pointer-events-auto">
-                <div className="absolute inset-0 bg-background/60 backdrop-blur-sm" />
-                <GlassCard className="relative z-10 max-w-md w-full p-8 text-center border-primary/20 shadow-2xl overflow-hidden">
-                    {/* Floating Elements */}
-                    <motion.div
-                        animate={{ y: [0, -10, 0], rotate: [0, 5, -5, 0] }}
-                        transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-                        className="mb-6 text-6xl inline-block grayscale hover:grayscale-0 transition-all duration-500"
-                    >
-                        👨‍🚀
-                    </motion.div>
 
-                    <motion.div
-                        animate={{ scale: [1, 1.1, 1], opacity: [0.5, 1, 0.5] }}
-                        transition={{ duration: 2, repeat: Infinity }}
-                        className="absolute -top-10 -right-10 w-32 h-32 bg-primary/20 rounded-full blur-2xl"
-                    />
 
-                    <h2 className="text-3xl font-bold mb-4 bg-gradient-to-r from-primary to-purple-500 bg-clip-text text-transparent">
-                        i'm as shocked as you this page is currently down.
-                    </h2>
-                    <p className="text-muted-foreground text-lg mb-6">
-                        it'll be back online soon.
-                    </p>
-                    <div className="inline-block px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium animate-pulse">
-                        just refresh the page. it might help
-                    </div>
-                </GlassCard>
-            </div>
-
-            {/* Blurred Content */}
-            <div className="space-y-24 filter blur-sm pointer-events-none select-none opacity-50">
+            {/* Content */}
+            <div className="space-y-24">
                 {/* Header */}
                 <section className="text-center space-y-4 pt-12">
                     <motion.h1
@@ -146,6 +151,9 @@ export default function WorkPage() {
                         professional journey
                     </h2>
                     <div className="relative border-l-2 border-primary/20 ml-3 md:ml-6 space-y-12 pl-8 md:pl-12 py-4">
+                        {/* Gradient Line Overlay */}
+                        <div className="absolute top-0 bottom-0 -left-[2px] w-[2px] bg-gradient-to-b from-primary/0 via-primary/50 to-primary/0" />
+
                         {experience.map((item, index) => (
                             <motion.div
                                 key={index}
@@ -155,26 +163,30 @@ export default function WorkPage() {
                                 transition={{ delay: index * 0.1 }}
                                 className="relative"
                             >
-                                <div className="absolute -left-[43px] md:-left-[59px] top-0 w-5 h-5 rounded-full border-4 border-background bg-primary" />
+                                {/* Timeline Marker */}
+                                <div className="absolute -left-[43px] md:-left-[59px] top-0 flex items-center justify-center w-5 h-5">
+                                    <div className="w-3 h-3 rounded-full bg-primary shadow-[0_0_10px_rgba(var(--primary-rgb),0.5)] z-10" />
+                                    <div className="absolute w-5 h-5 rounded-full bg-primary/20 animate-pulse" />
+                                </div>
 
                                 <GlassCard className="p-6 md:p-8" hoverEffect>
                                     <div className="flex flex-wrap justify-between items-start gap-4 mb-4">
                                         <div>
-                                            <h3 className="text-xl font-bold text-foreground">{item.role}</h3>
-                                            <div className="text-primary font-medium">{item.company}</div>
+                                            <h3 className="text-xl font-bold text-foreground font-bodoni tracking-wide">{item.role}</h3>
+                                            <div className="text-primary font-medium text-sm uppercase tracking-wider mt-1">{item.company}</div>
                                         </div>
-                                        <span className="px-3 py-1 rounded-full bg-secondary/10 text-secondary text-sm font-medium">
+                                        <span className="px-3 py-1 rounded-full bg-secondary/10 text-secondary text-xs font-bold uppercase tracking-wider border border-secondary/20">
                                             {item.period}
                                         </span>
                                     </div>
 
-                                    <p className="text-muted-foreground mb-4">{item.description}</p>
+                                    <p className="text-muted-foreground mb-6 leading-relaxed">{item.description}</p>
 
-                                    <ul className="space-y-2">
+                                    <ul className="space-y-3">
                                         {item.achievements.map((achievement, i) => (
-                                            <li key={i} className="flex items-start gap-2 text-sm text-muted-foreground">
-                                                <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-primary/60 shrink-0" />
-                                                {achievement}
+                                            <li key={i} className="flex items-start gap-3 text-sm text-muted-foreground">
+                                                <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-primary/60 shrink-0 shadow-[0_0_5px_rgba(var(--primary-rgb),0.3)]" />
+                                                <span className="leading-relaxed">{achievement}</span>
                                             </li>
                                         ))}
                                     </ul>
