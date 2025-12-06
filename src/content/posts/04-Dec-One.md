@@ -1,6 +1,5 @@
 ---
 title: "thoughts on a blitz"
-date: "2025-12-04"
 excerpt: "i'm pulling an all-nighter."
 author: "Odinaka"
 ---

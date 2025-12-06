@@ -8,7 +8,8 @@ import { motion } from "framer-motion";
 const navItems = [
     { name: "Home", path: "/" },
     { name: "Work", path: "/work" },
-    { name: "Blog", path: "/blog" },
+    { name: "Thoughts", path: "/blog" },
+    { name: "Blitz", path: "/blitz" },
 ];
 
 export function Navbar() {

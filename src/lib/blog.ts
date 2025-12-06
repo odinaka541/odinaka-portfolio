@@ -3,6 +3,7 @@ import path from "path";
 import matter from "gray-matter";
 import { remark } from "remark";
 import html from "remark-html";
+import { getFileCreationDate } from "@/lib/date";
 
 const postsDirectory = path.join(process.cwd(), "src/content/posts");
 
@@ -30,9 +31,12 @@ export function getSortedPostsData(): PostData[] {
             const fileContents = fs.readFileSync(fullPath, "utf8");
             const matterResult = matter(fileContents);
 
+            const date = matterResult.data.date || getFileCreationDate(fullPath);
+
             return {
                 slug,
-                ...(matterResult.data as { title: string; date: string; excerpt: string; author: string }),
+                ...(matterResult.data as { title: string; excerpt: string; author: string }),
+                date,
             };
         });
 
@@ -55,9 +59,12 @@ export async function getPostData(slug: string): Promise<PostData> {
         .process(matterResult.content);
     const contentHtml = processedContent.toString();
 
+    const date = matterResult.data.date || getFileCreationDate(fullPath);
+
     return {
         slug,
         contentHtml,
-        ...(matterResult.data as { title: string; date: string; excerpt: string; author: string }),
+        ...(matterResult.data as { title: string; excerpt: string; author: string }),
+        date,
     };
 }

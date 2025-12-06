@@ -1,6 +1,5 @@
 ---
 title: "i thought about space"
-date: "2025-11-06"
 excerpt: "one of my favourite things to get lost in thought about is space - outer space. you could say i’m obsessed."
 author: "Odinaka"
 ---

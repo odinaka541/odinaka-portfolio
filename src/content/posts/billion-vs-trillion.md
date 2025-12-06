@@ -1,6 +1,5 @@
 ---
 title: "i thought about the difference between 1 billion and 1 trillion"
-date: "2025-11-02"
 excerpt: "1 million seconds is approximately 11.6 days. 1 billion seconds is 31.7 years. 1 trillion seconds is 31,700 years."
 author: "Odinaka"
 ---

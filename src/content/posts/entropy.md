@@ -1,6 +1,5 @@
 ---
 title: "i thought about entropy"
-date: "2025-10-29"
 excerpt: "it is a constant beautiful in itself, and even more beautiful when you realise how much our lives are affected by it."
 author: "Odinaka"
 ---

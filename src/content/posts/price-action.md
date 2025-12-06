@@ -1,6 +1,5 @@
 ---
 title: "Reading Price Action: A Comprehensive Guide to Market Structure [5 mins read]"
-date: "2025-11-25"
 excerpt: "Most traders lose money not because they lack indicators, but because they don't understand what the market is actually telling them."
 author: "Odinaka"
 ---

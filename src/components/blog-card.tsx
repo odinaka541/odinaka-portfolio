@@ -50,7 +50,9 @@ export function BlogCard({ slug, title, excerpt, date, author, index }: BlogCard
                         {new Date(date).toLocaleDateString("en-US", {
                             month: "short",
                             day: "numeric",
-                            year: "numeric"
+                            year: "numeric",
+                            hour: "2-digit",
+                            minute: "2-digit"
                         })}
                     </span>
                     <span className="text-xs font-medium text-primary opacity-0 group-hover:opacity-100 transition-opacity">

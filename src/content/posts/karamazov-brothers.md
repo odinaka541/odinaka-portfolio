@@ -1,6 +1,5 @@
 ---
 title: "i thought about the Karamazov Brothers"
-date: "2025-11-10"
 excerpt: "it’s a novel by Fyodor Dostoevsky, one of my favourite writers. it’s about three distinct and uniquely interesting brothers."
 author: "Odinaka"
 ---

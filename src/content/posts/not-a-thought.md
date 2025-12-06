@@ -1,6 +1,5 @@
 ---
 title: "not really a thought."
-date: "2025-11-30"
 excerpt: "this is not really a thought like the others."
 author: "Odinaka"
 ---

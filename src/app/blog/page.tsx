@@ -2,7 +2,7 @@ import { getSortedPostsData } from "@/lib/blog";
 import { BlogCard } from "@/components/blog-card";
 
 export const metadata = {
-    title: "Blog - Odinaka",
+    title: "Thoughts - Odinaka",
     description: "Thoughts, ideas, and stories.",
 };
 

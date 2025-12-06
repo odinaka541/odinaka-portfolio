@@ -1,6 +1,5 @@
 ---
 title: "i thought about Adam Smith"
-date: "2025-10-31"
 excerpt: "“each man is the best judge of his own interests.” my paraphased sentence. it feels modern, almost like something Milton Friedman would say."
 author: "Odinaka"
 ---
