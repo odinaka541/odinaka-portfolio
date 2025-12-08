@@ -2,6 +2,7 @@
 title: "i thought about art"
 excerpt: "'artists don't just admire art. they have reasons why they do too.'"
 author: "Odinaka"
+date: "2025-11-29T15:48:49+01:00"
 ---
 
 "artists don't just admire art. they have reasons why they do too." i thought about those words again, after hearing them for the first time by a friend a long time ago. 

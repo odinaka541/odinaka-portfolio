@@ -2,6 +2,7 @@
 title: "i thought about space"
 excerpt: "one of my favourite things to get lost in thought about is space - outer space. you could say i’m obsessed."
 author: "Odinaka"
+date: "2025-11-25T15:13:01+01:00"
 ---
 
 one of my favourite things to get lost in thought about is space - outer space. you could say i’m obsessed. like most people i dreamt about being an astronaut (a formula one driver too, but that’s for some other time). i thought about the vast beauties in space; the nebulas and cosmic patterns. i thought about how incredibly massive the universe is. imagine Earth to be a tiny grain of sand in a bucket of sand. the bucket of sand is on a beach. there are other buckets of sand on that beach. now imagine how many beaches there are on Earth. imagine all of that and you still would be roughly 10 to the 70th power off, in terms of the true scale of the universe. try punching that in a calculator. that’s how big the universe really is. mind-melting.

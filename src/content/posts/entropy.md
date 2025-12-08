@@ -2,6 +2,7 @@
 title: "i thought about entropy"
 excerpt: "it is a constant beautiful in itself, and even more beautiful when you realise how much our lives are affected by it."
 author: "Odinaka"
+date: "2025-11-25T13:56:52+01:00"
 ---
 
 it is a constant beautiful in itself, and even more beautiful when you realise how much our lives are affected by it.

@@ -2,6 +2,7 @@
 title: "i thought about Adam Smith"
 excerpt: "“each man is the best judge of his own interests.” my paraphased sentence. it feels modern, almost like something Milton Friedman would say."
 author: "Odinaka"
+date: "2025-11-25T15:13:01+01:00"
 ---
 
 “each man is the best judge of his own interests.” my paraphased sentence. it feels modern, almost like something Milton Friedman would say. yet its core echoes, however faintly, through the pages of Adam Smith’s Invisible Hand theory.

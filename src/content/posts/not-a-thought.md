@@ -2,6 +2,7 @@
 title: "not really a thought."
 excerpt: "this is not really a thought like the others."
 author: "Odinaka"
+date: "2025-11-30T06:21:53+01:00"
 ---
 
 this is not really a thought like the others. i just wanted to unburden a bit.

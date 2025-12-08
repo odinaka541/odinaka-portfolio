@@ -2,6 +2,7 @@
 title: "i thought about loewy"
 excerpt: "Loewy's work might be the reason for that saying, 'Convenience is the modern man's drug.' his designs were so aesthetically pleasing that an entire industry was built off his principles."
 author: "Odinaka"
+date: "2025-11-25T15:13:01+01:00"
 ---
 
 i read a lot. i write a lot too. i share a lot too. i just never do any of the last two in public. but for posterity sake, i’ll leave as much as i can, as often as i can.

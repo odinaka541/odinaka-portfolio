@@ -2,6 +2,7 @@
 title: "i thought about the difference between 1 billion and 1 trillion"
 excerpt: "1 million seconds is approximately 11.6 days. 1 billion seconds is 31.7 years. 1 trillion seconds is 31,700 years."
 author: "Odinaka"
+date: "2025-11-25T15:13:01+01:00"
 ---
 
 1 million seconds is approximately 11.6 days. that’s long enough for a good vacation (i think. i’ve never been on one.) 1 billion seconds is 31.7 years. that’s about one-third the lives most people will live. one-third! 1 trillion seconds is 31,700 years. if you were to watch Avengers: Endgame (just because i saw it recently) from the start to the end nonstop (credits included) for 31700 years, you would finish the movie 93 million times approximately.

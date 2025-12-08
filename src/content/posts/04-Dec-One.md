@@ -2,6 +2,7 @@
 title: "thoughts on a blitz"
 excerpt: "i'm pulling an all-nighter."
 author: "Odinaka"
+date: "2025-12-04T21:42:37+01:00"
 ---
 
 ok. i'm pulling an all-nighter. i love these. i might have implied that a feature for lemina.co was ready, when, in fact, it was more a 60% readiness. time to build it in time to demo for the investors. truth is, i could've finished it a while ago, but i just wanted the investors to spend on the product first, but i delivered. this is fun. let's dance.
