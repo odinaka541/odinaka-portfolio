@@ -123,8 +123,8 @@ export default function Home() {
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
           {[
             { label: "projects completed (vanity metric, 1/3)", value: "3+" },
-            { label: "years of experience (vanity metric, 2/3)", value: "~1" },
-            { label: "technologies mastered (vanity metric, 3/3)", value: "6+" },
+            { label: "years of experience (vanity metric, 2/3)", value: "2" },
+            { label: "technologies mastered (vanity metric, 3/3)", value: "the right" },
           ].map((stat, index) => (
             <GlassCard
               key={index}

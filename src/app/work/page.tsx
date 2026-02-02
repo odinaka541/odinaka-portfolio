@@ -6,6 +6,13 @@ import { motion } from "framer-motion";
 
 const projects = [
     {
+        title: "Lemina",
+        description: "AI system that helps angel investors and vc firms with their investment careers. Features deal sourcing, due diligence, and network coordination.",
+        tags: ["TSX", "Python", "Database", "AI"],
+        links: { demo: "https://lemina.co", github: "#" },
+        image: "/images/projects/lemina.png"
+    },
+    {
         title: "Memora AI & Semantic Search",
         description: "AI engine for a meme social media platform that processes uploaded memes to extract intelligence. Features a semantic search engine that sorts memes by meaning and returns semantically similar results.",
         tags: ["Python", "AI", "Semantic Search", "Social Media"],
