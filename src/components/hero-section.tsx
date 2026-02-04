@@ -11,8 +11,8 @@ export function HeroSection() {
             {/* Background Image - TON 618 */}
             <div className="absolute inset-0 z-0">
                 <Image
-                    src="/images/ton-618-v2.png"
-                    alt="TON 618 Black Hole"
+                    src="/images/hero-flack-hole.jpg"
+                    alt="Black Hole Event Horizon"
                     fill
                     className="object-cover object-center opacity-80"
                     priority

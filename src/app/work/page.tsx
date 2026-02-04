@@ -5,6 +5,14 @@ import { GlassCard } from "@/components/ui/glass-card";
 import { motion } from "framer-motion";
 
 const projects = [
+
+    {
+        title: "YouVersion to Notion Daily Sync",
+        description: "Automatically syncs the YouVersion Bible Verse of the Day (with image!) to your Notion page every morning. Features multi-strategy fetching, beautiful Notion formatting, and automated execution via GitHub Actions.",
+        tags: ["Python", "Notion API", "GitHub Actions", "Automation"],
+        links: { demo: "#", github: "https://github.com/odinaka541/bible-verse-image-2-notion" },
+        image: "/images/projects/youversion-sync.jpg"
+    },
     {
         title: "Lemina",
         description: "AI system that helps angel investors and vc firms with their investment careers. Features deal sourcing, due diligence, and network coordination.",
@@ -71,6 +79,17 @@ const projects = [
 ];
 
 const experience = [
+    {
+        role: "Founding Engineer",
+        company: "Lemina",
+        period: "2025 - Present",
+        description: "Building an AI-native operating system for investment professionals. Leading technical architecture and development of document intelligence and deal sourcing systems.",
+        achievements: [
+            "Architected scalable AI pipelines for processing complex financial documents with high precision",
+            "Implemented secure, SOC2-aligned infrastructure for handling sensitive investment data",
+            "Developed multi-agent systems for automated due diligence and market analysis"
+        ]
+    },
     {
         role: "Freelance AI & Backend Engineer",
         company: "Self-Employed",
