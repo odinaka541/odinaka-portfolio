@@ -92,9 +92,8 @@ export default function Home() {
                 i believe that every dataset has a story to tell, and my mission is to uncover it.
               </p>
               <p>
-                i love developing software, and complex code, as much as i do finance. when i'm not training models, you can find me exploring the latest in quantitative finance or stargazing. naturally, you can already tell i love maths and physics a bit too much. but, as of 29-Nov-2025, i am guilty of not solving a single question or studying either subject in <strong><em>TWO WEEKS!</em></strong> damn.
-                <br />
-                well, it'll change. on to more pressing matters...
+                i love developing software, and complex code, as much as i do finance. when i'm not training models, you can find me exploring the latest in quantitative finance or stargazing. naturally, you can already tell i love maths and physics a bit too much.
+                on to more pressing matters...
               </p>
 
               <div className="flex flex-wrap gap-4 pt-4">
@@ -124,7 +123,7 @@ export default function Home() {
           {[
             { label: "projects completed (vanity metric, 1/3)", value: "3+" },
             { label: "years of experience (vanity metric, 2/3)", value: "2" },
-            { label: "technologies mastered (vanity metric, 3/3)", value: "the right" },
+            { label: "(vanity metric, 3/3)", value: "these stats mean nothing. i'm good." },
           ].map((stat, index) => (
             <GlassCard
               key={index}
