@@ -1,59 +1,51 @@
 "use client";
 
 import Link from "next/link";
-import { Mail, FileText, Github, Twitter, Linkedin } from "lucide-react";
+import { CopyButton } from "@/components/copy-button";
 
 const socialLinks = [
-    {
-        name: "Email",
-        href: "mailto:3odinaka@gmail.com",
-        icon: Mail,
-    },
-    {
-        name: "Resume",
-        href: "/assets/resume.pdf",
-        icon: FileText,
-    },
-    {
-        name: "X (Twitter)",
-        href: "https://x.com/odinaka541", // Placeholder or derived from context if available
-        icon: Twitter,
-    },
-    {
-        name: "GitHub",
-        href: "https://github.com/odinaka541",
-        icon: Github,
-    },
-    {
-        name: "LinkedIn",
-        href: "https://www.linkedin.com/in/odinaka-agbayi-444572194/", // Placeholder
-        icon: Linkedin,
-    },
+    { name: "X (Twitter)", href: "https://x.com/odinaka541" },
+    { name: "GitHub", href: "https://github.com/odinaka541" },
+    { name: "LinkedIn", href: "https://www.linkedin.com/in/odinaka-agbayi-444572194/" },
 ];
 
 export function Footer() {
     return (
-        <footer className="border-t border-border/40 bg-background/50 backdrop-blur-xl mt-auto">
-            <div className="mx-auto max-w-7xl px-6 py-12 md:flex md:items-center md:justify-between lg:px-8">
-                <div className="flex justify-center space-x-6 md:order-2">
-                    {socialLinks.map((item) => (
-                        <Link
-                            key={item.name}
-                            href={item.href}
-                            className="text-muted-foreground hover:text-primary transition-colors"
-                            target={item.href.startsWith("http") ? "_blank" : undefined}
-                            rel={item.href.startsWith("http") ? "noopener noreferrer" : undefined}
+        <footer className="bg-black text-[#E5E5E5] py-24 px-6 border-t border-neutral-900">
+            <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-end gap-12">
+
+                <div className="space-y-4">
+                    <h3 className="text-sm font-mono text-neutral-500 uppercase tracking-widest">Contact</h3>
+                    <div className="flex items-center gap-4">
+                        <a
+                            href="mailto:3odinaka@gmail.com"
+                            className="text-2xl md:text-3xl font-bold tracking-tight text-white hover:text-neutral-400 transition-colors"
                         >
-                            <span className="sr-only">{item.name}</span>
-                            <item.icon className="h-6 w-6" aria-hidden="true" />
-                        </Link>
-                    ))}
+                            3odinaka@gmail.com
+                        </a>
+                        <CopyButton text="3odinaka@gmail.com" />
+                    </div>
                 </div>
-                <div className="mt-8 md:order-1 md:mt-0">
-                    <p className="text-center text-xs leading-5 text-muted-foreground">
-                        &copy; {new Date().getFullYear()} Odinaka. All rights reserved.
+
+                <div className="flex flex-col items-start md:items-end gap-6">
+                    <div className="flex gap-8">
+                        {socialLinks.map((item) => (
+                            <Link
+                                key={item.name}
+                                href={item.href}
+                                className="text-neutral-500 hover:text-white transition-colors uppercase tracking-widest text-xs font-medium"
+                                target={item.href.startsWith("http") ? "_blank" : undefined}
+                                rel={item.href.startsWith("http") ? "noopener noreferrer" : undefined}
+                            >
+                                {item.name}
+                            </Link>
+                        ))}
+                    </div>
+                    <p className="text-neutral-700 text-xs font-mono">
+                        &copy; {new Date().getFullYear()} ODINAKA.
                     </p>
                 </div>
+
             </div>
         </footer>
     );

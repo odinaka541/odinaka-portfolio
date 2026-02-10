@@ -1,204 +1,129 @@
 "use client";
 
-import { GlassCard } from "@/components/ui/glass-card";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight, Mail } from "lucide-react";
-import { HeroSection } from "@/components/hero-section";
-import { ScrollArrows } from "@/components/scroll-arrows";
-import { InfoBox } from "@/components/info-box";
 
 export default function Home() {
   return (
-    <div className="space-y-24 pb-20">
-      {/* Hero Section - TON 618 */}
-      <div className="absolute top-0 left-0 right-0 z-0">
-        <HeroSection />
-      </div>
+    <div className="min-h-screen bg-black text-[#E5E5E5] font-sans selection:bg-white selection:text-black">
+      {/* Hero Section */}
+      <section className="relative pt-32 pb-20 px-6 max-w-7xl mx-auto">
+        <div className="flex flex-col gap-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="space-y-4"
+          >
+            <h1 className="text-[12vw] leading-[0.9] font-bold tracking-tighter mix-blend-difference text-white opacity-90">
+              SOFTWARE<br />
+              DEVELOPER
+            </h1>
+            <div className="flex flex-col-reverse md:flex-row gap-8 md:gap-12 pt-8 md:pt-12">
+              <div className="space-y-6 flex-1">
+                <p className="text-xl md:text-2xl font-light leading-relaxed text-neutral-400 max-w-md">
+                  hello, i am <span className="text-white font-medium">odinaka</span>.
+                  i enjoy building out intelligent systems and digital experiences. these experiences usually lie at the intersection of finance and tech, but i build whatever i want.
+                </p>
+                <div className="flex gap-6 pt-4">
+                  <Link href="/work" className="group flex items-center gap-2 text-white border-b border-white pb-1 hover:opacity-70 transition-opacity">
+                    View Works <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  </Link>
+                  <Link href="mailto:3odinaka@gmail.com" className="group flex items-center gap-2 text-neutral-400 border-b border-neutral-400 pb-1 hover:text-white hover:border-white transition-all">
+                    Contact Me
+                  </Link>
+                </div>
+              </div>
 
-      {/* Spacer for Hero */}
-      <div className="h-screen flex flex-col justify-end pb-24 pointer-events-none">
-        <div className="relative z-10">
-          <ScrollArrows />
-        </div>
-      </div>
-
-      {/* Deep Dive Section */}
-      <section className="relative z-10 pt-24 max-w-5xl mx-auto px-4">
-        <InfoBox title="first things first..." align="left" delay={0.2} showArrow>
-          <p>
-            i turned off the auto-caps feature on my phone on a hot, humid and boring day, many summers ago, and it kinda stuck with me. but i assure you, i have a really good grasp of the English language (and a few more, really).<br />
-            <em>I'm capable of wonders.</em> see? moving on...
-          </p>
-        </InfoBox>
-
-        <InfoBox title="now..." align="right" delay={0.4} showArrow>
-          <p>
-            you are most likely here because you are interested in my work as a software developer. welcome. you can stay for everything else.
-          </p>
-        </InfoBox>
-
-        <InfoBox title="let's play a game." align="left" delay={0.6}>
-          <p>
-            i learned something profound. when posed with the question, "why?", everyone usually replies with one of two reasons - the <em>noble</em> reason or the <em>real</em> reason. noble is what you tell everyone else. real is what you know to be true.<br />
-            can you figure out mine?
-          </p>
-        </InfoBox>
-      </section>
-
-      {/* Who I Am Section */}
-      <section className="max-w-4xl mx-auto relative z-10">
-        <GlassCard className="p-8 md:p-12 relative overflow-hidden border-white/10 bg-black/40 backdrop-blur-md">
-          <div className="absolute top-0 right-0 w-64 h-64 bg-primary/10 rounded-full blur-3xl -z-10" />
-          <div className="absolute bottom-0 left-0 w-64 h-64 bg-purple-500/10 rounded-full blur-3xl -z-10" />
-
-          <div className="grid md:grid-cols-[1fr_2fr] gap-8 items-center">
-            <div className="space-y-4">
-              <motion.div
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                className="relative w-48 h-48 mx-auto md:mx-0 rounded-full overflow-hidden border-2 border-white/20 shadow-2xl"
-              >
+              {/* Profile Image - Small Circle */}
+              <div className="relative w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden bg-neutral-900 border border-neutral-800 grayscale hover:grayscale-0 transition-all duration-700 shrink-0">
                 <Image
                   src="/assets/profile.png"
                   alt="Odinaka"
                   fill
-                  className="object-cover"
+                  className="object-cover opacity-90 hover:scale-105 transition-transform duration-700"
                 />
-              </motion.div>
-              <motion.h2
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                className="text-4xl md:text-5xl font-bold text-white text-center md:text-left font-bodoni tracking-wide lowercase"
-              >
-                who i am
-              </motion.h2>
+              </div>
             </div>
+          </motion.div>
+        </div>
+      </section>
 
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.2 }}
-              className="space-y-4 text-gray-300 text-lg leading-relaxed"
-            >
-              <p>
-                i just am.
-                <br />
-                beyond the code and algorithms, i am a problem solver who sees the world through data.
-                i believe that every dataset has a story to tell, and my mission is to uncover it.
-              </p>
-              <p>
-                i love developing software, and complex code, as much as i do finance. when i'm not training models, you can find me exploring the latest in quantitative finance or stargazing. naturally, you can already tell i love maths and physics a bit too much.
-                on to more pressing matters...
-              </p>
-
-              <div className="flex flex-wrap gap-4 pt-4">
-                <Link
-                  href="/work"
-                  className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white text-black font-semibold hover:bg-gray-200 transition-colors"
-                >
-                  View My Work
-                  <ArrowRight className="w-4 h-4" />
-                </Link>
-                <Link
-                  href="mailto:3odinaka@gmail.com"
-                  className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-transparent text-white font-semibold border border-white/20 hover:bg-white/10 transition-colors"
-                >
-                  Get In Touch
-                  <Mail className="w-4 h-4" />
-                </Link>
-              </div>
-            </motion.div>
+      {/* Selected Works Preview - Minimal Grid */}
+      <section className="py-24 px-6 max-w-7xl mx-auto border-t border-neutral-900">
+        <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-4">
+          <div className="space-y-2">
+            <h2 className="text-4xl font-bold tracking-tight">SELECTED WORKS</h2>
+            <p className="text-neutral-500 max-w-md text-sm">
+              some of them are hobby projects for problems i have personally had. i just enjoy building.
+            </p>
           </div>
-        </GlassCard>
-      </section>
-
-      {/* Stats Section */}
-      <section className="relative z-10">
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
-          {[
-            { label: "projects completed (vanity metric, 1/3)", value: "3+" },
-            { label: "years of experience (vanity metric, 2/3)", value: "2" },
-            { label: "(vanity metric, 3/3)", value: "these stats mean nothing. i'm good." },
-          ].map((stat, index) => (
-            <GlassCard
-              key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.1 }}
-              className="text-center py-8 border-white/10 bg-black/40 backdrop-blur-sm"
-              hoverEffect
-            >
-              <div className="text-4xl font-bold text-white mb-2">{stat.value}</div>
-              <div className="text-sm font-medium text-gray-400">{stat.label}</div>
-            </GlassCard>
-          ))}
+          <Link href="/work" className="text-sm text-neutral-500 hover:text-white transition-colors">See all projects</Link>
         </div>
-      </section>
 
-      {/* Skills Section */}
-      <section className="space-y-12 relative z-10">
-        <motion.h2
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-4xl md:text-5xl font-bold text-center text-white font-bodoni lowercase tracking-wide"
-        >
-          technical expertise
-        </motion.h2>
-
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-2 gap-x-12 gap-y-24">
           {[
             {
-              title: "Machine Learning & AI",
-              desc: "i read (well, listened to) Isaac Asimov's Last Question, and i was drawn to the idea of intelligent machines. and since then, i enjoy building said machines.",
-              tags: ["Python", "TensorFlow", "PyTorch", "Scikit-learn"]
+              title: "Lemina",
+              category: "AI Operating System for Institutional Investors",
+              src: "/images/projects/lemina.png"
             },
             {
-              title: "Quantitative Finance",
-              desc: "i think money makes the world go round. i enjoy the concept of money. moreso, i enjoy leveraging technology to tinker with said concept. think of it as a high-stakes game of chess, but with real money. (speaking of chess, i still can't play that good.)",
-              tags: ["Python", "Pandas", "NumPy", "SciPy"]
+              title: "Memora AI",
+              category: "Semantic Search Engine",
+              src: "/images/projects/memora_ai.png"
             },
             {
-              title: "Backend & Database",
-              desc: "i just do this for the money. i'm good at it anyways lmao. check my 'work' page out.",
-              tags: ["Node.js", "PostgreSQL", "MongoDB", "API Design"]
+              title: "YouVersion Sync",
+              category: "Automation",
+              src: "/images/projects/youversion-sync.jpg"
             }
-          ].map((skill, index) => (
-            <GlassCard
-              key={index}
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.1 }}
-              hoverEffect
-              className="h-full flex flex-col border-white/10 bg-black/40 backdrop-blur-sm"
-            >
-              <h3 className="text-xl font-semibold mb-3 flex items-center gap-2 text-white">
-                {skill.title}
-              </h3>
-              <p className="text-gray-400 mb-6 flex-1">
-                {skill.desc}
-              </p>
-              <div className="flex flex-wrap gap-2">
-                {skill.tags.map(tag => (
-                  <span
-                    key={tag}
-                    className="px-3 py-1 rounded-lg bg-white/5 text-sm font-medium text-gray-300 border border-white/10"
-                  >
-                    {tag}
-                  </span>
-                ))}
+          ].map((project, i) => (
+            <div key={i} className="group cursor-pointer space-y-4">
+              <div className="relative aspect-[4/3] bg-neutral-900 overflow-hidden rounded-sm">
+                <Image
+                  src={project.src}
+                  alt={project.title}
+                  fill
+                  className="object-cover transition-transform duration-500 group-hover:scale-105 opacity-80 group-hover:opacity-100"
+                />
               </div>
-            </GlassCard>
+              <div className="flex justify-between items-start border-b border-neutral-800 pb-4">
+                <div>
+                  <h3 className="text-2xl font-medium text-white group-hover:text-neutral-300 transition-colors">{project.title}</h3>
+                  <p className="text-sm text-neutral-500 mt-1">{project.category}</p>
+                </div>
+                <ArrowRight className="w-5 h-5 -rotate-45 text-neutral-600 group-hover:text-white group-hover:rotate-0 transition-all" />
+              </div>
+            </div>
           ))}
         </div>
       </section>
-    </div >
+
+      {/* About / Philosophy Section */}
+      <section className="py-32 px-6 max-w-7xl mx-auto border-t border-neutral-900">
+        <div className="grid md:grid-cols-[1fr_2fr] gap-12">
+          <h2 className="text-sm font-mono text-neutral-500 uppercase tracking-widest sticky top-32 h-fit">Philosophy</h2>
+          <div className="space-y-12">
+            <p className="text-3xl md:text-5xl leading-tight font-light text-neutral-200">
+              "Use the noble reason or the real reason. I prefer the real one."
+            </p>
+            <div className="grid md:grid-cols-2 gap-12 text-neutral-400 leading-relaxed">
+              <p>
+                Beyond the code and algorithms, I am a problem solver who sees the world through data.
+                I believe that every dataset has a story to tell, and my mission is to uncover it.
+              </p>
+              <p>
+                I love developing software and complex code as much as I do finance. When I'm not training models,
+                you can find me exploring the latest in quantitative finance or stargazing.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
   );
 }

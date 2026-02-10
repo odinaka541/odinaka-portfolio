@@ -1,7 +1,7 @@
-import { GlassCard } from "@/components/ui/glass-card";
-import { ArrowUpRight, Github } from "lucide-react";
+import { ArrowRight, Github, ExternalLink } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 interface ProjectCardProps {
     title: string;
@@ -17,76 +17,72 @@ interface ProjectCardProps {
 
 export function ProjectCard({ title, description, tags, links, index, image }: ProjectCardProps) {
     return (
-        <GlassCard
+        <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: index * 0.1 }}
-            className="group flex flex-col h-full overflow-hidden border-0 bg-white/50 dark:bg-slate-900/50"
-            hoverEffect
+            className="group cursor-pointer flex flex-col gap-4"
         >
-            <div className="relative h-48 mb-6 rounded-xl overflow-hidden bg-gradient-to-br from-primary/5 to-secondary/5 group-hover:from-primary/10 group-hover:to-secondary/10 transition-colors border border-primary/10">
+            {/* Image Container */}
+            <div className="relative aspect-[16/10] bg-neutral-900 overflow-hidden rounded-sm border border-neutral-800/50">
                 {image ? (
                     <Image
                         src={image}
                         alt={title}
                         fill
-                        className="object-cover transition-transform duration-500 group-hover:scale-105"
+                        className="object-cover transition-transform duration-700 group-hover:scale-105 opacity-90 group-hover:opacity-100"
                     />
                 ) : (
-                    <div className="absolute inset-0 flex items-center justify-center">
-                        <div className="absolute inset-0 w-full h-full bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary/5 via-transparent to-transparent opacity-50" />
-                        <div className="relative z-10 text-4xl font-bold text-primary/20 group-hover:text-primary/40 transition-colors font-bodoni">
-                            🟠
-                        </div>
-                        {/* Abstract Pattern Overlay */}
-                        <div className="absolute inset-0 opacity-[0.03] bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] mix-blend-overlay" />
+                    <div className="absolute inset-0 flex items-center justify-center bg-neutral-900">
+                        <span className="text-neutral-700 font-mono text-xs uppercase tracking-widest">No Preview</span>
                     </div>
                 )}
-            </div>
 
-            <div className="flex-1 flex flex-col">
-                <h3 className="text-xl font-bold mb-2 group-hover:text-primary transition-colors font-bodoni tracking-wide">
-                    {title}
-                </h3>
-                <p className="text-muted-foreground mb-4 flex-1 line-clamp-3 text-sm leading-relaxed">
-                    {description}
-                </p>
-
-                <div className="flex flex-wrap gap-2 mb-6">
-                    {tags.map((tag) => (
-                        <span
-                            key={tag}
-                            className="px-2.5 py-0.5 rounded-full text-[10px] uppercase tracking-wider font-medium bg-primary/5 text-primary border border-primary/10"
-                        >
-                            {tag}
-                        </span>
-                    ))}
-                </div>
-
-                <div className="flex gap-3 mt-auto">
-                    {links.demo && (
-                        <Link
-                            href={links.demo}
-                            target="_blank"
-                            className="flex-1 inline-flex justify-center items-center gap-2 px-4 py-2 rounded-lg bg-primary text-primary-foreground text-sm font-medium hover:bg-primary/90 transition-colors shadow-sm hover:shadow-md"
-                        >
-                            Live Demo
-                            <ArrowUpRight className="w-4 h-4" />
-                        </Link>
-                    )}
+                {/* Overlay Links */}
+                <div className="absolute top-4 right-4 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     {links.github && (
                         <Link
                             href={links.github}
                             target="_blank"
-                            className="flex-1 inline-flex justify-center items-center gap-2 px-4 py-2 rounded-lg bg-muted text-muted-foreground text-sm font-medium hover:bg-muted/80 hover:text-foreground transition-colors border border-border/50"
+                            className="p-2 bg-black text-white rounded-full hover:bg-white hover:text-black transition-colors"
                         >
-                            Code
                             <Github className="w-4 h-4" />
+                        </Link>
+                    )}
+                    {links.demo && (
+                        <Link
+                            href={links.demo}
+                            target="_blank"
+                            className="p-2 bg-black text-white rounded-full hover:bg-white hover:text-black transition-colors"
+                        >
+                            <ExternalLink className="w-4 h-4" />
                         </Link>
                     )}
                 </div>
             </div>
-        </GlassCard>
+
+            {/* Content */}
+            <div className="space-y-2 border-b border-neutral-800 pb-6 group-hover:border-white/20 transition-colors">
+                <div className="flex justify-between items-start">
+                    <h3 className="text-xl font-medium text-white group-hover:text-neutral-300 transition-colors">
+                        {title}
+                    </h3>
+                    <ArrowRight className="w-5 h-5 -rotate-45 text-neutral-600 group-hover:text-white group-hover:rotate-0 transition-all duration-300" />
+                </div>
+
+                <p className="text-sm text-neutral-500 line-clamp-2 leading-relaxed max-w-[90%]">
+                    {description}
+                </p>
+
+                <div className="flex flex-wrap gap-x-2 gap-y-1 pt-1">
+                    {tags.slice(0, 3).map((tag, i) => (
+                        <span key={tag} className="text-xs font-mono text-neutral-600 uppercase">
+                            {tag}{i < tags.slice(0, 3).length - 1 && " /"}
+                        </span>
+                    ))}
+                </div>
+            </div>
+        </motion.div>
     );
 }

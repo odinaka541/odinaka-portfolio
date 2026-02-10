@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { Bookmark } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 
 interface BlogCardProps {
     slug: string;
@@ -15,51 +15,35 @@ interface BlogCardProps {
 
 export function BlogCard({ slug, title, excerpt, date, author, index }: BlogCardProps) {
     return (
-        <Link href={`/blog/${slug}`}>
-            <motion.div
+        <Link href={`/blog/${slug}`} className="group block">
+            <motion.article
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className="group relative bg-white dark:bg-slate-900 rounded-xl p-6 shadow-sm border border-border hover:shadow-md transition-all duration-300 hover:-translate-y-1"
+                className="py-12 border-b border-neutral-900 group-hover:border-neutral-800 transition-colors"
             >
-                <div className="flex items-center justify-between mb-4">
-                    <div className="flex items-center gap-3">
-                        <div className="w-10 h-10 rounded-full bg-muted flex items-center justify-center text-lg font-bold text-muted-foreground overflow-hidden">
-                            {/* Placeholder avatar or initial */}
-                            {author.charAt(0)}
-                        </div>
-                        <div>
-                            <div className="font-semibold text-sm text-foreground">{author}</div>
-                            <div className="text-xs text-muted-foreground">{author}</div>
-                        </div>
-                    </div>
-                    <Bookmark className="w-5 h-5 text-orange-500 opacity-0 group-hover:opacity-100 transition-opacity" />
-                </div>
-
-                <h3 className="text-xl font-bold mb-3 text-foreground group-hover:text-primary transition-colors">
-                    {title}
-                </h3>
-
-                <p className="text-muted-foreground text-sm leading-relaxed mb-6 line-clamp-3">
-                    {excerpt}
-                </p>
-
-                <div className="flex items-center justify-between pt-4 border-t border-border/50">
-                    <span className="text-xs font-medium text-muted-foreground uppercase tracking-wider">
+                <div className="flex flex-col md:flex-row gap-6 md:items-baseline justify-between mb-4">
+                    <h3 className="text-3xl md:text-4xl font-bold text-white group-hover:text-neutral-400 transition-colors leading-tight tracking-tight">
+                        {title}
+                    </h3>
+                    <span className="text-sm font-mono text-neutral-600 shrink-0 uppercase tracking-widest">
                         {new Date(date).toLocaleDateString("en-US", {
-                            month: "short",
-                            day: "numeric",
-                            year: "numeric",
-                            hour: "2-digit",
-                            minute: "2-digit"
+                            month: "long",
+                            year: "numeric"
                         })}
                     </span>
-                    <span className="text-xs font-medium text-primary opacity-0 group-hover:opacity-100 transition-opacity">
-                        Read Post →
-                    </span>
                 </div>
-            </motion.div>
+
+                <div className="flex justify-between items-end gap-8">
+                    <p className="text-neutral-500 text-lg leading-relaxed max-w-2xl line-clamp-2">
+                        {excerpt}
+                    </p>
+                    <div className="hidden md:block opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0">
+                        <ArrowUpRight className="w-6 h-6 text-white" />
+                    </div>
+                </div>
+            </motion.article>
         </Link>
     );
 }

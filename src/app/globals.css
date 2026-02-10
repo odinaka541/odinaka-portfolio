@@ -2,43 +2,32 @@
 @plugin "@tailwindcss/typography";
 
 @theme {
-  --color-primary: #059669;
-  --color-primary-foreground: #ffffff;
-  --color-secondary: #f97316;
+  --color-primary: #ffffff;
+  --color-primary-foreground: #000000;
+  --color-secondary: #333333;
   --color-secondary-foreground: #ffffff;
-  --color-background: #f8fafc;
-  --color-foreground: #0f172a;
-  --color-muted: #f1f5f9;
-  --color-muted-foreground: #64748b;
-  --color-card: rgba(255, 255, 255, 0.9);
-  --color-card-foreground: #0f172a;
-  --color-border: #e2e8f0;
+  --color-background: #050505;
+  --color-foreground: #e5e5e5;
+  --color-muted: #1a1a1a;
+  --color-muted-foreground: #888888;
+  --color-card: #0a0a0a;
+  --color-card-foreground: #e5e5e5;
+  --color-border: #222222;
 
   --font-sans: var(--font-geist-sans), system-ui, sans-serif;
   --font-mono: var(--font-geist-mono), monospace;
+  --font-display: var(--font-bodoni), serif;
 }
 
 :root {
-  --background: #f8fafc;
-  --foreground: #0f172a;
+  --background: #050505;
+  --foreground: #e5e5e5;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0f172a;
-    --foreground: #f8fafc;
-  }
-
-  @theme {
-    --color-primary: #10b981;
-    --color-secondary: #fb923c;
-    --color-background: #0f172a;
-    --color-foreground: #f8fafc;
-    --color-muted: #1e293b;
-    --color-muted-foreground: #94a3b8;
-    --color-card: rgba(15, 23, 42, 0.9);
-    --color-card-foreground: #f8fafc;
-    --color-border: #334155;
+    --background: #050505;
+    --foreground: #e5e5e5;
   }
 }
 

@@ -10,20 +10,20 @@ interface BlitzCardProps {
 
 export function BlitzCard({ contentHtml, date, index }: BlitzCardProps) {
     return (
-        <motion.div
+        <motion.article
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: index * 0.1 }}
-            className="group relative bg-white/5 dark:bg-slate-900/50 backdrop-blur-sm rounded-xl p-6 shadow-sm border border-border/50 hover:border-primary/50 transition-all duration-300"
+            className="group py-8 border-b border-neutral-900 last:border-0 hover:bg-neutral-900/30 transition-colors rounded-sm px-4 -mx-4"
         >
-            <div
-                className="prose prose-sm dark:prose-invert max-w-none mb-4 font-medium text-foreground/90"
-                dangerouslySetInnerHTML={{ __html: contentHtml }}
-            />
+            <div className="flex flex-col md:flex-row gap-4 md:items-start justify-between">
+                <div
+                    className="prose prose-invert prose-lg max-w-none text-neutral-300 group-hover:text-white transition-colors leading-relaxed"
+                    dangerouslySetInnerHTML={{ __html: contentHtml }}
+                />
 
-            <div className="flex items-center justify-between pt-2 border-t border-border/30">
-                <span className="text-xs font-medium text-muted-foreground uppercase tracking-wider">
+                <span className="text-xs font-mono text-neutral-600 shrink-0 uppercase tracking-widest pt-2">
                     {new Date(date).toLocaleDateString("en-US", {
                         month: "short",
                         day: "numeric",
@@ -32,8 +32,7 @@ export function BlitzCard({ contentHtml, date, index }: BlitzCardProps) {
                         minute: "2-digit"
                     })}
                 </span>
-                <div className="w-2 h-2 rounded-full bg-primary/50 group-hover:bg-primary transition-colors" />
             </div>
-        </motion.div>
+        </motion.article>
     );
 }

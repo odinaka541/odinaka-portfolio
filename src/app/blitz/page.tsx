@@ -10,28 +10,32 @@ export default function BlitzPage() {
     const allBlitzData = getSortedBlitzData();
 
     return (
-        <div className="max-w-2xl mx-auto space-y-12 pt-12">
-            <div className="text-center space-y-4">
-                <h1 className="text-4xl font-bold tracking-tight">blitz thoughts</h1>
-                <p className="text-muted-foreground text-lg">
-                    fleeting ideas, quick updates, and random musings.
-                </p>
-            </div>
+        <div className="min-h-screen bg-black text-[#E5E5E5] pt-32 pb-24 px-6">
+            <div className="max-w-5xl mx-auto space-y-20">
+                <div className="space-y-6">
+                    <h1 className="text-[10vw] leading-[0.9] font-bold tracking-tighter text-white">
+                        BLITZ<br />THOUGHTS
+                    </h1>
+                    <p className="text-xl text-neutral-400 max-w-2xl font-light">
+                        fleeting ideas, quick updates, and random musings. raw and unfiltered.
+                    </p>
+                </div>
 
-            <div className="space-y-6">
-                {allBlitzData.length > 0 ? (
-                    allBlitzData.map((blitz, index) => (
-                        <BlitzCard
-                            key={blitz.id}
-                            {...blitz}
-                            index={index}
-                        />
-                    ))
-                ) : (
-                    <div className="text-center py-12 text-muted-foreground">
-                        <p>No thoughts yet. Check back soon!</p>
-                    </div>
-                )}
+                <div className="space-y-8 border-t border-neutral-900 pt-12">
+                    {allBlitzData.length > 0 ? (
+                        allBlitzData.map((blitz, index) => (
+                            <BlitzCard
+                                key={blitz.id}
+                                {...blitz}
+                                index={index}
+                            />
+                        ))
+                    ) : (
+                        <div className="py-12 text-neutral-500 font-light text-xl">
+                            <p>No thoughts yet. The void is silent.</p>
+                        </div>
+                    )}
+                </div>
             </div>
         </div>
     );
