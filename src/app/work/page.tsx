@@ -68,6 +68,13 @@ const projects = [
         image: "/images/projects/swapam_ai.png"
     },
     {
+        title: "Ebenezer AMA",
+        description: "Portfolio website for a client.",
+        tags: ["Next.js", "Tailwind CSS", "Framer Motion"],
+        links: { demo: "https://pace-website-teal.vercel.app", github: "#" },
+        image: "/images/projects/ebenezer-ama.png"
+    },
+    {
         title: "Telegram AI Bot",
         description: "Telegram bot that analyzes Excel sheets with conversational AI.",
         tags: ["Python", "Telegram API", "Pandas"],
@@ -80,31 +87,26 @@ const experience = [
     {
         role: "Founding Engineer",
         company: "Lemina",
-        period: "2025 - Present",
         description: "Building an AI-native operating system for investment professionals. Leading architecture of document intelligence systems.",
     },
     {
         role: "Freelance AI Engineer",
         company: "Self-Employed",
-        period: "2024 - Present",
         description: "Building robust backend systems and integrating advanced AI capabilities for diverse clients.",
     },
     {
         role: "AI/ML Engineer",
         company: "Memora",
-        period: "2025 - Present",
         description: "Leading the development of machine learning systems for automated image data analysis and prediction.",
     },
     {
         role: "Data Science Consultant",
         company: "International NGO",
-        period: "2025 - Present",
         description: "Developed web scraping automation scripts using Python to streamline data collection processes.",
     },
     {
         role: "Lead Instructor",
         company: "Eureka Financial Academy",
-        period: "2022 - 2024",
         description: "Designed and delivered curriculum on blockchain technology and investment strategies.",
     }
 ];
@@ -146,7 +148,6 @@ export default function WorkPage() {
                             <div key={index} className="grid md:grid-cols-[1fr_2fr] gap-8 pb-12 border-b border-neutral-900 last:border-0 hover:opacity-100 opacity-60 hover:opacity-100 transition-opacity duration-500">
                                 <div>
                                     <h3 className="text-2xl font-medium text-white">{item.company}</h3>
-                                    <p className="text-sm font-mono text-neutral-500 mt-2 uppercase tracking-wider">{item.period}</p>
                                 </div>
                                 <div className="space-y-2">
                                     <h4 className="text-xl text-white">{item.role}</h4>

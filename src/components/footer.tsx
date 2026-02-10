@@ -4,6 +4,7 @@ import Link from "next/link";
 import { CopyButton } from "@/components/copy-button";
 
 const socialLinks = [
+    { name: "Resume", href: "/assets/resume.pdf" },
     { name: "X (Twitter)", href: "https://x.com/odinaka541" },
     { name: "GitHub", href: "https://github.com/odinaka541" },
     { name: "LinkedIn", href: "https://www.linkedin.com/in/odinaka-agbayi-444572194/" },
