@@ -1,5 +1,5 @@
 ---
-title: "dear catalyst funds,"
+title: "dear catalyst fund,"
 excerpt: "i know you will see this."
 author: "Odinaka"
 date: "2026-02-12T00:41:01+01:00"
