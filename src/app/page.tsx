@@ -18,8 +18,8 @@ export default function Home() {
             className="space-y-4"
           >
             <h1 className="text-[12vw] leading-[0.9] font-bold tracking-tighter mix-blend-difference text-white opacity-90">
-              SOFTWARE<br />
-              DEVELOPER
+              i am<br />
+              Odinaka.
             </h1>
             <div className="flex flex-col-reverse md:flex-row gap-8 md:gap-12 pt-8 md:pt-12">
               <div className="space-y-6 flex-1">

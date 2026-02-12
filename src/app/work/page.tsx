@@ -72,7 +72,7 @@ const projects = [
         description: "Portfolio website for a client.",
         tags: ["Next.js", "Tailwind CSS", "Framer Motion"],
         links: { demo: "https://pace-website-teal.vercel.app", github: "#" },
-        image: "/images/projects/ebenezer-ama.png"
+        image: "/images/projects/ebenezer.png"
     },
     {
         title: "Telegram AI Bot",
