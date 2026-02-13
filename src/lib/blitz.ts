@@ -4,6 +4,7 @@ import matter from "gray-matter";
 import { remark } from "remark";
 import html from "remark-html";
 import { getFileCreationDate } from "@/lib/date";
+import { parse } from "date-fns";
 
 const blitzDirectory = path.join(process.cwd(), "src/content/blitz");
 
@@ -12,6 +13,34 @@ export interface BlitzData {
     date: string;
     contentHtml: string;
     content?: string;
+}
+
+function getDateFromFilename(fileName: string): string | null {
+    try {
+        // Pattern 1: DDMMMYY (e.g., 11feb26-one.md, 07Dec25-two.md)
+        const pattern1 = /^(\d{2})([a-zA-Z]{3})(\d{2})/;
+        const match1 = fileName.match(pattern1);
+        if (match1) {
+            const dateStr = `${match1[1]}${match1[2]}${match1[3]}`;
+            // parsed date object
+            const parsedDate = parse(dateStr, "ddMMMyy", new Date());
+            return parsedDate.toISOString();
+        }
+
+        // Pattern 2: DD-MMM (e.g., 04-Dec-One.md) - Defaulting to 2025 based on git history
+        const pattern2 = /^(\d{2})-([a-zA-Z]{3})/;
+        const match2 = fileName.match(pattern2);
+        if (match2) {
+            const dateStr = `${match2[1]}-${match2[2]}-25`;
+            const parsedDate = parse(dateStr, "dd-MMM-yy", new Date());
+            return parsedDate.toISOString();
+        }
+
+        return null;
+    } catch (e) {
+        console.error(`Error parsing date from filename ${fileName}:`, e);
+        return null;
+    }
 }
 
 export function getSortedBlitzData(): BlitzData[] {
@@ -35,7 +64,9 @@ export function getSortedBlitzData(): BlitzData[] {
                 .processSync(matterResult.content);
             const contentHtml = processedContent.toString();
 
-            const date = matterResult.data.date || getFileCreationDate(fullPath);
+            const date = matterResult.data.date
+                ? new Date(matterResult.data.date).toISOString()
+                : (getDateFromFilename(fileName) || getFileCreationDate(fullPath));
 
             return {
                 id,
