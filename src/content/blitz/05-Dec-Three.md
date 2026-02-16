@@ -1,4 +1,5 @@
 ---
+date: "2025-12-06T17:01:29+01:00"
 ---
  
 i made a tweet on @odinaka541 (on X):

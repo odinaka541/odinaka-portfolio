@@ -1,4 +1,5 @@
 ---
+date: "2025-12-07T23:15:38+01:00"
 ---
 
 now, if you do make it to this point of my blitz thoughts, i am inviting you for the Immersion Camp Meeting happening in Abuja, Nigeria. 10th - 14th of December, 2025.

@@ -1,4 +1,5 @@
 ---
+date: "2025-12-08T13:08:25+01:00"
 ---
 
 i think i'm in love. with what? with whom? you'll just have to wait to find out. i would also wait to find out, to be honest lol. hints: a programming language. (maybe lmao)

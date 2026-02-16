@@ -1,4 +1,5 @@
 ---
+date: "2025-12-08T14:40:25+01:00"
 ---
 
 it takes a lot of sheer will to take something from imagination to reality. a lot.

@@ -1,4 +1,5 @@
 ---
+date: "2025-12-06T17:01:29+01:00"
 ---
 
 can't believe it's just 11pm. i've covered a lot of ground, and i have a lot more to go. nothing like a good law drama to keep me engaged and power through.

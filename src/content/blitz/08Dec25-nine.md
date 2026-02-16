@@ -1,4 +1,5 @@
 ---
+date: "2025-12-08T12:28:54+01:00"
 ---
 
 i hit a block. i can't decide the elements to go in certain sections, and it's annoying. i knew i shouldn't have slept. lol.
