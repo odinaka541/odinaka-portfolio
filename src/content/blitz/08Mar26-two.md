@@ -1,4 +1,5 @@
 ---
+date: "2026-03-08T19:53:21+01:00"
 ---
 
 i'm not a mathematical genius. not yet.
