@@ -66,7 +66,7 @@ export function getSortedBlitzData(): BlitzData[] {
 
             const date = matterResult.data.date
                 ? new Date(matterResult.data.date).toISOString()
-                : (getDateFromFilename(fileName) || getFileCreationDate(fullPath));
+                : (getFileCreationDate(fullPath) || getDateFromFilename(fileName) || new Date().toISOString());
 
             return {
                 id,
